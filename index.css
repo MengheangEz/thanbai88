@@ -7,12 +7,23 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
+    animation: fadeInDown .5s ease-in-out;
     z-index: 1000; /* Ensure it stays above other content */
 }
-
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0)
+    }
+    
+    to {
+        opacity: 1;
+        transform: translateZ(0)
+    }
+    }
 .container h3{
     font-size: 25px;
-    font-weight: bold;
+    font-weight: bold; 
     margin-top: 10px;
 }
 
